@@ -59,6 +59,7 @@
 		425861AD2A6A85E20082730A /* RecipeEditorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425861AC2A6A85E20082730A /* RecipeEditorConfig.swift */; };
 		425861B02A6A8C2F0082730A /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425861AF2A6A8C2F0082730A /* RecipeListView.swift */; };
 		425861B22A6A8E8D0082730A /* RecipeListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425861B12A6A8E8D0082730A /* RecipeListItemView.swift */; };
+		425E35F72A9CAACF00A7FE5A /* SwiftUIDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425E35F62A9CAACF00A7FE5A /* SwiftUIDemoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		425861AC2A6A85E20082730A /* RecipeEditorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditorConfig.swift; sourceTree = "<group>"; };
 		425861AF2A6A8C2F0082730A /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
 		425861B12A6A8E8D0082730A /* RecipeListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListItemView.swift; sourceTree = "<group>"; };
+		425E35F62A9CAACF00A7FE5A /* SwiftUIDemoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,8 @@
 		4258616F2A6A30670082730A /* SwiftUIDemo_Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				42426D742A6E213100378376 /* SwiftUIView.swift */,
+				425E35F62A9CAACF00A7FE5A /* SwiftUIDemoView.swift */,
 				425861702A6A30670082730A /* SwiftUIDemo_RecipeApp.swift */,
 				42426D802A6E28F500378376 /* CustomControls */,
 				42426D792A6E280E00378376 /* TitleViews */,
@@ -259,7 +263,6 @@
 				425861742A6A30680082730A /* Assets.xcassets */,
 				425861762A6A30680082730A /* SwiftUIDemo_Recipe.entitlements */,
 				425861772A6A30680082730A /* Preview Content */,
-				42426D742A6E213100378376 /* SwiftUIView.swift */,
 			);
 			path = SwiftUIDemo_Recipe;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				42426D842A6E2E2F00378376 /* RecipeDirectionsView.swift in Sources */,
 				425861A52A6A621D0082730A /* ModelHelpers.swift in Sources */,
 				425861AD2A6A85E20082730A /* RecipeEditorConfig.swift in Sources */,
+				425E35F72A9CAACF00A7FE5A /* SwiftUIDemoView.swift in Sources */,
 				425861AA2A6A85320082730A /* ContentListView.swift in Sources */,
 				425861A32A6A395B0082730A /* Recipe.swift in Sources */,
 				425861A82A6A7ED80082730A /* SidebarView.swift in Sources */,
