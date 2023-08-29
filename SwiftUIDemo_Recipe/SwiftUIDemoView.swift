@@ -9,6 +9,7 @@ import SwiftUI
 import AVKit
 import SpriteKit
 
+// 只能在 iOS 中运行 Mac 编译会报错
 struct SwiftUIDemoView: View {
     @State private var completionAmount: CGFloat = 0.0
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -170,7 +171,66 @@ struct SwiftUIDemoView: View {
                 }
                 .frame(width: 400, height: 300)
                 
+                if #available(iOS 15.0, *) {
+//                    "https://avatars.githubusercontent.com/u/1680273?v=4"
+                    AsyncImage(url: URL(string: "https://avatars.githubusercontent.com/u/1680273?v=4")) { image in
+                      image.resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .padding()
+                    } placeholder: {
+                        Color.red
+                    }
+                    .frame(width: 128, height: 128)
+                    .clipShape(RoundedRectangle(cornerRadius: 25))
+                }
                 
+                //palette 模式 可以根据图层 设置不同颜色
+                Image(systemName: "shareplay")
+                    .symbolRenderingMode(.palette)
+                    .foregroundStyle(.blue, .red)
+                    .font(.system(size: 144))
+                // 设置渐变
+                Image(systemName: "person.3.sequence.fill")
+                    .symbolRenderingMode(.palette)
+                    .foregroundStyle(
+                        .linearGradient(colors: [.red, .cyan], startPoint: .top, endPoint: .bottomTrailing),
+                        .linearGradient(colors: [.cyan, .green], startPoint: .top, endPoint: .bottomTrailing)
+                    )
+                    .font(.system(size: 144))
+                    .padding(50)
+
+                Button {
+                    print("Button Tapped")
+                } label: {
+                    Text("Welcome")
+                        .frame(minWidth: 0, maxWidth: 200, minHeight: 0, maxHeight: 200)
+                        .font(.largeTitle)
+                        .background(Color.cyan)
+                }
+                
+                Text("Hello world")
+                    .background(Color.red)
+                    .ignoresSafeArea()
+                
+                //GeometryReader 可以实现具体值约束的设定， 根据屏幕比例，因为swiftUI是无法获取屏幕值的自动布局
+                GeometryReader { geometry in
+                    HStack(spacing: 0) {
+                        Text("Left")
+                            .font(.largeTitle)
+                            .foregroundColor(.black)
+                            .frame(width: geometry.size.width * 0.5)
+                            .background(Color.yellow)
+                        
+                        Text("Right")
+                            .font(.largeTitle)
+                            .foregroundColor(.black)
+                            .frame(width: geometry.size.width * 0.5)
+                            .background(Color.red)
+
+                    }
+                                        
+                }
             }
         }
     }

@@ -8,7 +8,7 @@
 import SwiftUI
 import SpriteKit
 
-// 一个简单的盒子掉落的游戏场景
+// 一个简单的盒子掉落的游戏场景  只能在 iOS 中运行 Mac 编译会报错
 class GameScene: SKScene {
     override func didMove(to view: SKView) {
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
