@@ -213,6 +213,8 @@ struct SwiftUIDemoView: View {
                     .background(Color.red)
                     .ignoresSafeArea()
                 
+                TossResult().frame(width: 400, height: 100)
+                
                 //GeometryReader 可以实现具体值约束的设定， 根据屏幕比例，因为swiftUI是无法获取屏幕值的自动布局
                 GeometryReader { geometry in
                     HStack(spacing: 0) {
@@ -229,7 +231,6 @@ struct SwiftUIDemoView: View {
                             .background(Color.red)
 
                     }
-                                        
                 }
             }
         }
@@ -239,5 +240,18 @@ struct SwiftUIDemoView: View {
 struct SwiftUIDemoView_Previews: PreviewProvider {
     static var previews: some View {
         SwiftUIDemoView()
+    }
+}
+
+struct TossResult: View {
+    var body: some View {
+        if Bool.random() {
+            Image("shareplay")
+                .resizable()
+                .scaledToFit()
+        } else {
+            Text("Better luck next time")
+                .font(.title)
+        }
     }
 }
